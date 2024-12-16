@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import ListDisplay from "../components/ListDisplay";
 import PokeDisplay from "../components/PokeDisplay";
 import Form from "../components/Form";
-import "../App.css";
+// i don't need this in here once I moved the code from App
+// import './App.css'
 
 function PokeList() {
   // thesee two have different keys in their objects

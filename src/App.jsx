@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router";
 import PokeList from "./pages/PokeList";
-import "./App.css";
-import Nav from "./components/Nav";
 import Welcome from "./pages/Welcome";
 import PokeShow from "./pages/PokeShow";
+import Nav from "./components/Nav";
+import "./App.css";
+
 // You need to have <Routes></Routes> (this is plural and has an opening
 // and closing tag because it wraps all the routes)
 // <Route /> is singular (no s) and it is self-closing
@@ -17,12 +18,12 @@ function App() {
     <>
       <Nav />
       <Routes>
-        <Route path="/welcome" element={<Welcome />} />
-
-        <Route path="/pokeshow" element={<PokeShow />} />
+        <Route path="/" element={<Welcome />} />
         <Route path="/pokelist" element={<PokeList />} />
+        <Route path="/pokemon/:name" element={<PokeShow />} />
       </Routes>
     </>
   );
 }
+
 export default App;
